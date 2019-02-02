@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        link(rel="stylesheet", href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css", integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS", crossorigin="anonymous")
+        link(rel="stylesheet", href="/styles/custom.css")
+    body
+        nav.navbar.navbar-expand-lg.navbar-light.bg-light
+            a.navbar-brand(href='#')
+                img(src="/image/apple.png", alt="", width="30")
+            button.navbar-toggler(type='button', data-toggle='collapse', data-target='#navbarNav', aria-controls='navbarNav', aria-expanded='false', aria-label='Toggle navigation')
+                span.navbar-toggler-icon
+            #navbarNav.collapse.navbar-collapse
+                ul.navbar-nav
+                    li.nav-item
+                        a.nav-link(href='/') Home
+                    li.nav-item
+                        a.nav-link(href='/users ') Features
+
+        .container.pt-5
+            block content
