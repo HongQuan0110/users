@@ -30,22 +30,7 @@ module.exports.postCreate = function(req, res){
     //users.push({name: req.body.name});
     req.body.id = shortid.generate();
     console.log(req.body);
-    var errors = [];
-
-    if(!req.body.name){
-        errors.push('Name is required');
-    }
-    if(!req.body.phone){
-        errors.push('Phone is required');
-    }
-
-    if(errors.length){
-        res.render('users/create.pug', {
-            errors: errors,
-            user: req.body
-        })
-        return;
-    }
+    console.log(res.locals);
 
     db.get('users').push((req.body)).write();
     res.redirect('/users');
