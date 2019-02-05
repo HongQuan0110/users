@@ -4,6 +4,9 @@ var port  = 3000;
 var bodyParser = require('body-parser');
 var cookieParser = require('cookie-parser');
 var userRoute = require('./routers/user.router.js');
+var authRouter = require('./routers/auth.router.js');
+
+var authMiddleware = require('./middlewares/auth.middleware');
 
 var app = express();
 app.set('view engine', 'pug');
@@ -22,7 +25,8 @@ app.get('/', function(req, res){
     });
 });
 
-app.use('/users', userRoute);
+app.use('/users', authMiddleware.requireAuth, userRoute);
+app.use('/auth', authRouter);
 
 app.listen(port, function(){
     console.log('Server listening on port', port);
