@@ -44,7 +44,9 @@
     {
       "name": "quan",
       "phone": "123",
-      "id": "Yi-ILADsJ"
+      "id": "Yi-ILADsJ",
+      "email": "quan@gmail.com",
+      "password": "120497"
     },
     {
       "name": "gg",
