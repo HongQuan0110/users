@@ -3,6 +3,7 @@ var shortid = require('shortid');
 
 module.exports.index = function(req, res){
     //res.send('<h1>Hello user</h1>');
+
     res.render('users/index.pug', {
         //users: users 
         users: db.get('users').value()
