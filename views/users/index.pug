@@ -10,11 +10,14 @@ block content
 
     table.table.mt-2
         tr 
+            th Avatar
             th Name
             th Phone
             th Detail
         each val in users
             tr
+                td 
+                    img(src=val.avatar, width="32")
                 td= val.name                
                 td=val.phone
                 td
