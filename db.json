@@ -709,5 +709,15 @@
       "image": "https://loremflickr.com/320/240",
       "description": "aenean lectus pellentesque eget nunc donec quis orci eget orci vehicula condimentum curabitur in libero"
     }
+  ],
+  "sessions": [
+    {
+      "id": "D2bR4E4E0",
+      "cart": {
+        "76d2765b-5dc3-4697-88fe-b5165fd99bff": 1,
+        "aaf9c4f4-665e-4644-b484-654eacbcc4d6": 4,
+        "daa13ef2-00ef-455a-8b03-6b95d58b58d8": 2
+      }
+    }
   ]
 }

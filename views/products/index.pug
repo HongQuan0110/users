@@ -16,7 +16,7 @@ block content
                     .card-body
                         h5.card-title= product.name
                         p.card-text= product.description
-                        a.btn.btn-primary Detail
+                        a.btn.btn-primary(href="/cart/add/" + product.id) Add
     
     .d-flex.bd-highlight.mb-3
         nav.ml-auto.p-2.bd-highlight(aria-label='Page navigation example')
