@@ -36,7 +36,7 @@ module.exports.postCreate = function(req, res){
     console.log(res.locals);
 
     db.get('users').push((req.body)).write();
-    res.redirect('/users');
+    res.redirect('/users/create');
 };
 
 module.exports.getID = function(req, res){

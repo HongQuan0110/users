@@ -1,0 +1,19 @@
+var db = require('../db');
+var shortid = require('shortid');
+
+module.exports.create = function(req, res, next){
+    res.render('transfer/create.pug', {
+        csrfToken: req.csrfToken()
+    });
+};
+
+module.exports.postCreate = function(req, res, next){
+    var data = {
+        id: shortid.generate(),
+        amount: parseInt(req.body.amount),
+        account: req.body.account,
+        userID: req.signedCookies.userID
+    }
+    db.get('transfer').push(data).write();
+    res.redirect('/transfer/create');
+};

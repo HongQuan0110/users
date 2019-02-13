@@ -1,0 +1,13 @@
+extends ../layouts/common.pug
+block content
+    h1 Transfer
+
+    form(action="/transfer/create", method="post")
+        input(type="hidden", name="_csrf", value=csrfToken)
+        .form-group
+            label(for="account") Account
+            input#account.form-control(type="text", name="account", placeholder="account")
+        .form-group
+            label(for="amount") Amount
+            input#amount.form-control(type="text", name="amount", placeholder="amount")
+        button.btn.btn-primary Transfer
