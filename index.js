@@ -7,6 +7,8 @@ var port  = 3000;
 var bodyParser = require('body-parser');
 var cookieParser = require('cookie-parser');
 var csurf = require('csurf');
+var mongoose = require('mongoose');
+mongoose.connect(process.env.MONGO_URL);
 
 var userRoute = require('./routes/user.route.js');
 var authRouter = require('./routes/auth.route.js');
