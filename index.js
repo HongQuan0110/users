@@ -29,7 +29,7 @@ app.use(bodyParser.json()); // for parsing application/json
 app.use(bodyParser.urlencoded({ extended: true })); // for parsing application/x-www-form-urlencoded
 app.use(cookieParser(process.env.SESSION_SECRET));
 app.use(sessionMiddleware);
-app.use(csurf({ cookie: true }));
+//app.use(csurf({ cookie: true }));
 
 
 app.use(express.static('public'))
